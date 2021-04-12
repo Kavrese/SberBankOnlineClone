@@ -9,9 +9,12 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorBackStartScreen">#FFF</color>
-    <color name="colorGreen">#23B52A</color>
+    <color name="colorGreen">#0B6A10</color>
     <color name="colorText1">#FFF</color>
     <color name="colorHint1">#E6E6E6</color>
+    <color name="colorHint2">#717171</color>
     <color name="colorBackPinCodeScreen">#171717</color>
     <color name="colorToolBarBackPinCodeScreen">#252525</color>
+    <color name="colorBackMain">#000000</color>
+    <color name="colorAlphaGreen">#70171717</color>
 </resources>
