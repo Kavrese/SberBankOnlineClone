@@ -187,6 +187,7 @@
         android:background="@color/colorItem1"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconTint="@color/main_menu"
+        app:itemRippleColor="@color/colorHint2"
         app:itemTextColor="@color/main_menu"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
