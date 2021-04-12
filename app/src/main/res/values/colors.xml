@@ -13,7 +13,8 @@
     <color name="colorText1">#FFF</color>
     <color name="colorHint1">#E6E6E6</color>
     <color name="colorHint2">#717171</color>
-    <color name="colorBackPinCodeScreen">#171717</color>
+    <color name="colorBackPinCodeScreen">#101010</color>
+    <color name="colorItem1">#252525</color>
     <color name="colorToolBarBackPinCodeScreen">#252525</color>
     <color name="colorBackMain">#000000</color>
     <color name="colorAlphaGreen">#70171717</color>

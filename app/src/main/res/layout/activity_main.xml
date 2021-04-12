@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_back_main"
-    android:paddingTop="20dp"
+    android:paddingTop="30dp"
     tools:context=".MainActivity"
     tools:menu="@menu/main_screen_menu">
 
@@ -28,7 +28,8 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="15dp"
-                app:cardCornerRadius="25dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +43,7 @@
 
             <ImageView
                 android:id="@+id/bell"
-                android:layout_width="30dp"
+                android:layout_width="25dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +54,7 @@
 
             <ImageView
                 android:id="@+id/assistent"
-                android:layout_width="30dp"
+                android:layout_width="25dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -103,6 +104,7 @@
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="35dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="70dp"
             android:orientation="horizontal"
             android:weightSum="3"
@@ -116,8 +118,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="clickSelects"
                 android:text="Действия"
                 android:textColor="@color/colorText1"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -126,8 +130,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="clickSelects"
                 android:text="Истории"
                 android:textColor="@color/colorHint2"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -136,8 +142,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="clickSelects"
                 android:text="Финансы"
                 android:textColor="@color/colorHint2"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -160,8 +168,10 @@
 
         <ImageView
             android:id="@+id/ver_menu"
-            android:layout_width="30dp"
+            android:layout_width="25dp"
             android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="14dp"
             app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -174,7 +184,7 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@color/colorBackPinCodeScreen"
+        android:background="@color/colorItem1"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconTint="@color/main_menu"
         app:itemTextColor="@color/main_menu"
@@ -186,16 +196,32 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:background="@drawable/back_scroll"
+            android:orientation="vertical"
+            android:paddingLeft="18dp"
+            android:paddingTop="25dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:drawableTint="@color/colorHint2"
+                android:gravity="bottom"
+                android:text="Карты"
+                android:textColor="@color/colorText1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
