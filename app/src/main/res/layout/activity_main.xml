@@ -67,11 +67,11 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="7dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="7dp"
                 app:cardBackgroundColor="@color/colorAlphaGreen"
-                app:cardCornerRadius="14dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/assistent"
@@ -83,9 +83,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center|left"
-                    android:paddingLeft="14dp"
+                    android:paddingLeft="16dp"
                     android:text="Поиск"
-                    android:textColor="@color/colorHint1" />
+                    android:textColor="@color/colorHint1"
+                    android:textSize="18sp" />
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -185,6 +186,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorItem1"
+        android:paddingTop="5dp"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconTint="@color/main_menu"
         app:itemRippleColor="@color/colorHint2"
@@ -196,32 +198,247 @@
         app:menu="@menu/main_screen_menu" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/back_scroll"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/back_scroll"
             android:orientation="vertical"
             android:paddingLeft="18dp"
             android:paddingTop="25dp"
             android:paddingRight="18dp">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/cards_lin"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
-                android:drawableTint="@color/colorHint2"
-                android:gravity="bottom"
-                android:text="Карты"
-                android:textColor="@color/colorText1"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Карты"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/card1" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="MasterCard Mass"
+                        android:textColor="@color/colorText1"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="1000,00 Ꝑ"
+                        android:textColor="@color/colorText1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_rss_feed_24"
+                        app:tint="@color/colorText1" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="●●●● 0000"
+                        android:textColor="@color/colorHint2"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vklads_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Вклады и счета"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/credits_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Кредиты"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/target_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Цели"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/investor_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Инвестиции и пенсии"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/strah_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Страхование"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/security_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Безопасность"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/val_lin"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/marginInCategories"
+                android:layout_marginBottom="22dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:drawableTint="@color/colorHint2"
+                    android:gravity="bottom"
+                    android:text="Валюты и металлы"
+                    android:textColor="@color/colorText1"
+                    android:textSize="@dimen/sizeTextInCategories"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

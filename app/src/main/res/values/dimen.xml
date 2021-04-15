@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="numdp">25dp</dimen>
+    <dimen name="sizeTextInCategories">16sp</dimen>
+    <dimen name="marginInCategories">32dp</dimen>
+</resources>
