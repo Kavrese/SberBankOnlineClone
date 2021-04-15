@@ -211,9 +211,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="18dp"
-            android:paddingTop="25dp"
-            android:paddingRight="18dp">
+            android:paddingTop="25dp">
 
             <LinearLayout
                 android:id="@+id/cards_lin"
@@ -223,12 +221,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textCards"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Карты"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
@@ -242,8 +241,9 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="40dp"
-                        android:layout_height="25dp"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:paddingLeft="18dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -290,6 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginTop="10dp"
+                        android:paddingRight="18dp"
                         android:text="●●●● 0000"
                         android:textColor="@color/colorHint2"
                         android:textSize="14sp"
@@ -307,15 +308,64 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textVklads"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Вклады и счета"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
                     android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#1EACACAC"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="30dp"
+                        android:paddingBottom="35dp"
+                        app:srcCompat="@drawable/ic_baseline_account_balance_24"
+                        app:tint="@color/colorHint2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Откройте вклад или счёт"
+                            android:textColor="@color/colorText1"
+                            android:textSize="@dimen/sizeTextInCategories"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="В рублях, валюте или дракоценных\n металлах"
+                            android:textColor="@color/colorHint2"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -327,11 +377,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textCredits"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Кредиты"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
@@ -347,11 +399,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textTargets"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Цели"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
@@ -367,11 +421,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textInvests"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Инвестиции и пенсии"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
@@ -387,11 +443,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textStrach"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Страхование"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
@@ -407,11 +465,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textSecurity"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Безопасность"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
@@ -428,11 +488,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textLin"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:drawableTint="@color/colorHint2"
                     android:gravity="bottom"
+                    android:paddingLeft="18dp"
                     android:text="Валюты и металлы"
                     android:textColor="@color/colorText1"
                     android:textSize="@dimen/sizeTextInCategories"
