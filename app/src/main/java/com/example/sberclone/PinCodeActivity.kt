@@ -6,9 +6,11 @@ import android.content.Intent
 import android.hardware.fingerprint.FingerprintManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.View
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_pin_code.*
@@ -54,8 +56,15 @@ class PinCodeActivity : AppCompatActivity() {
 
     private fun checkPoints(){
         if (now_point == 5){
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            window.setFlags(
+                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+            )
+            motion.transitionToEnd()
+            Handler().postDelayed({
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }, 2000)
         }
     }
 
